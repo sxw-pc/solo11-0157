@@ -1,0 +1,6 @@
+{
+ "passes":[
+   {"id":"FIELD-1","case_id":"DEMO-PLOT","minimum":4,"spans":[[0,2],[2,4]]},
+   {"id":"FIELD-2","case_id":"DEMO-PLOT","minimum":4,"spans":[[0,2],[1,3]]}
+ ]
+}

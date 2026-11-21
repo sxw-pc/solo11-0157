@@ -1,0 +1,27 @@
+{
+  "schema": "treecase.permit.v1",
+  "event_id": "permit-t401-a",
+  "recorded_at": "2026-03-02T09:00:00+08:00",
+  "source": {
+    "kind": "permit_application",
+    "reference": "PERMIT-2026-0302-401A"
+  },
+  "permit": {
+    "permit_id": "PER-401-A",
+    "tree_no": "401",
+    "block_id": "BLK-11",
+    "grid_code": "G11-05",
+    "tag_id": "TAG-8401",
+    "requested_action": "prune",
+    "max_cut_diameter_cm": 7.0,
+    "max_cut_count": 2,
+    "valid_from": "2026-03-02T12:00:00+08:00",
+    "valid_to": "2026-03-10T18:00:00+08:00",
+    "applied_at": "2026-03-02T08:30:00+08:00",
+    "approved_at": "2026-03-02T09:00:00+08:00",
+    "signer_id": "OFFICER-3",
+    "signature_file": "../assets/permit_signature.txt",
+    "protected_authorization": null,
+    "risk_revision": 1
+  }
+}

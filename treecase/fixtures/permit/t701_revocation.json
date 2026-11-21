@@ -1,0 +1,16 @@
+{
+  "schema": "treecase.permit_revocation.v1",
+  "event_id": "revoke-t701-notice",
+  "recorded_at": "2026-03-06T12:00:00+08:00",
+  "source": {
+    "kind": "revocation_notice",
+    "reference": "REVOKE-2026-0306-701"
+  },
+  "revocation": {
+    "permit_id": "PER-701-REVOKE",
+    "revoked_at": "2026-03-06T11:00:00+08:00",
+    "reason": "签章机构撤回许可，既有作业责任待复核",
+    "authority": "Municipal Risk Office",
+    "notice_file": "../assets/revocation_notice_t701.txt"
+  }
+}

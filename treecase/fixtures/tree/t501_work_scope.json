@@ -1,0 +1,47 @@
+{
+  "schema": "treecase.tree.v1",
+  "event_id": "tree-t501-initial",
+  "recorded_at": "2026-03-01T10:30:00+08:00",
+  "source": {
+    "kind": "patrol_inspection",
+    "reference": "PATROL-2026-0301-501"
+  },
+  "tree": {
+    "archive_id": "ARC-501-01",
+    "archive_version": 1,
+    "tree_no": "501",
+    "block_id": "BLK-12",
+    "grid_code": "G12-02",
+    "tag_id": "TAG-8501",
+    "species": "Sophora japonica",
+    "protected_level": "ordinary",
+    "planted_year": 1998
+  },
+  "inspections": [
+    {
+      "inspection_id": "INS-T501-01",
+      "inspector_id": "PATROL-A",
+      "inspector_org": "City Forestry Patrol",
+      "observed_at": "2026-03-01T10:00:00+08:00",
+      "self_reported": false,
+      "evidence": [
+        {
+          "evidence_id": "EV-T501-L",
+          "kind": "lean",
+          "capture_at": "2026-03-01T08:55:00+08:00",
+          "captured_by": "PATROL-A",
+          "file": "../assets/lean_501_a.txt",
+          "lean_angle_deg": 12.0
+        },
+        {
+          "evidence_id": "EV-T501-H",
+          "kind": "hollow",
+          "capture_at": "2026-03-01T09:05:00+08:00",
+          "captured_by": "PATROL-B",
+          "file": "../assets/hollow_501_b.txt",
+          "hollow_ratio": 0.2
+        }
+      ]
+    }
+  ]
+}

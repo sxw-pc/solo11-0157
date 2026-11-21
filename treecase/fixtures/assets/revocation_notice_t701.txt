@@ -1,0 +1,1 @@
+offline synthetic evidence artifact: revocation_notice_t701.txt

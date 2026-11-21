@@ -1,0 +1,47 @@
+{
+  "schema": "treecase.tree.v1",
+  "event_id": "tree-t601-base",
+  "recorded_at": "2026-03-01T10:00:00+08:00",
+  "source": {
+    "kind": "patrol_inspection",
+    "reference": "PATROL-2026-0301-601"
+  },
+  "tree": {
+    "archive_id": "ARC-601-01",
+    "archive_version": 1,
+    "tree_no": "601",
+    "block_id": "BLK-61",
+    "grid_code": "G61-01",
+    "tag_id": "TAG-6001",
+    "species": "Platanus orientalis",
+    "protected_level": "ordinary",
+    "planted_year": 1998
+  },
+  "inspections": [
+    {
+      "inspection_id": "INS-T601-01",
+      "inspector_id": "PATROL-A",
+      "inspector_org": "City Forestry Patrol",
+      "observed_at": "2026-03-01T09:30:00+08:00",
+      "self_reported": false,
+      "evidence": [
+        {
+          "evidence_id": "EV-T601-L",
+          "kind": "lean",
+          "capture_at": "2026-03-01T08:55:00+08:00",
+          "captured_by": "PATROL-A",
+          "file": "../assets/lean_601_a.txt",
+          "lean_angle_deg": 9.0
+        },
+        {
+          "evidence_id": "EV-T601-H",
+          "kind": "hollow",
+          "capture_at": "2026-03-01T09:05:00+08:00",
+          "captured_by": "PATROL-B",
+          "file": "../assets/hollow_601_b.txt",
+          "hollow_ratio": 0.22
+        }
+      ]
+    }
+  ]
+}

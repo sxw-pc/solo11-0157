@@ -1,0 +1,29 @@
+{
+  "schema": "treecase.work.v1",
+  "event_id": "work-t701-future",
+  "recorded_at": "2026-03-08T10:00:00+08:00",
+  "source": {
+    "kind": "field_work_receipt",
+    "reference": "WORK-2026-0308-701"
+  },
+  "work": {
+    "work_id": "W-701-FUTURE",
+    "permit_id": "PER-701-REVOKE",
+    "tree_no": "701",
+    "block_id": "BLK-14",
+    "grid_code": "G14-02",
+    "tag_id": "TAG-8701",
+    "contractor_id": "GREEN-OPS",
+    "operator_id": "OP-21",
+    "performed_at": "2026-03-08T09:00:00+08:00",
+    "cuts": [
+      {
+        "diameter_cm": 2.0,
+        "count": 1,
+        "part": "lower limb"
+      }
+    ],
+    "reinspection": null,
+    "counter_evidence": null
+  }
+}
