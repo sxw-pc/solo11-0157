@@ -1,0 +1,8 @@
+{
+  "people":["A","B","C"],
+  "old_public_constraints":[{"witness":"lean","possible_people":["A","B"]}],
+  "new_alias_options":[
+    {"id":"expanded","constraints":[{"witness":"lean","possible_people":["B","C"]}],"proves_distinct":["lean","hollow"]},
+    {"id":"relationship-only","proves_distinct":["lean","hollow"]}
+  ]
+}

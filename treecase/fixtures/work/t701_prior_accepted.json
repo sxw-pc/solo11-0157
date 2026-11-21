@@ -1,0 +1,36 @@
+{
+  "schema": "treecase.work.v1",
+  "event_id": "work-t701-prior",
+  "recorded_at": "2026-03-03T11:00:00+08:00",
+  "source": {
+    "kind": "field_work_receipt",
+    "reference": "WORK-2026-0303-701"
+  },
+  "work": {
+    "work_id": "W-701-PRIOR",
+    "permit_id": "PER-701-REVOKE",
+    "tree_no": "701",
+    "block_id": "BLK-14",
+    "grid_code": "G14-02",
+    "tag_id": "TAG-8701",
+    "contractor_id": "GREEN-OPS",
+    "operator_id": "OP-21",
+    "performed_at": "2026-03-03T09:00:00+08:00",
+    "cuts": [
+      {
+        "diameter_cm": 3.0,
+        "count": 1,
+        "part": "lower limb"
+      }
+    ],
+    "reinspection": {
+      "reinspection_id": "R-701",
+      "witness_id": "AUD-77",
+      "witness_org": "Independent Tree Audit Office",
+      "witnessed_at": "2026-03-03T10:00:00+08:00",
+      "stable": true,
+      "file": "../assets/reinspection_701.txt"
+    },
+    "counter_evidence": null
+  }
+}

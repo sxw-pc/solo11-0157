@@ -1,0 +1,47 @@
+{
+  "schema": "treecase.tree.v1",
+  "event_id": "tree-t401-initial",
+  "recorded_at": "2026-03-01T09:30:00+08:00",
+  "source": {
+    "kind": "patrol_inspection",
+    "reference": "PATROL-2026-0301-401"
+  },
+  "tree": {
+    "archive_id": "ARC-401-01",
+    "archive_version": 1,
+    "tree_no": "401",
+    "block_id": "BLK-11",
+    "grid_code": "G11-05",
+    "tag_id": "TAG-8401",
+    "species": "Acer truncatum",
+    "protected_level": "ordinary",
+    "planted_year": 1998
+  },
+  "inspections": [
+    {
+      "inspection_id": "INS-T401-01",
+      "inspector_id": "PATROL-A",
+      "inspector_org": "City Forestry Patrol",
+      "observed_at": "2026-03-01T09:00:00+08:00",
+      "self_reported": false,
+      "evidence": [
+        {
+          "evidence_id": "EV-T401-L",
+          "kind": "lean",
+          "capture_at": "2026-03-01T08:55:00+08:00",
+          "captured_by": "PATROL-A",
+          "file": "../assets/lean_401_a.txt",
+          "lean_angle_deg": 14.0
+        },
+        {
+          "evidence_id": "EV-T401-H",
+          "kind": "hollow",
+          "capture_at": "2026-03-01T09:05:00+08:00",
+          "captured_by": "PATROL-B",
+          "file": "../assets/hollow_401_b.txt",
+          "hollow_ratio": 0.3
+        }
+      ]
+    }
+  ]
+}

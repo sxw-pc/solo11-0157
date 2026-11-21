@@ -1,0 +1,47 @@
+{
+  "schema": "treecase.tree.v1",
+  "event_id": "tree-t603-single-source",
+  "recorded_at": "2026-03-02T10:00:00+08:00",
+  "source": {
+    "kind": "patrol_inspection",
+    "reference": "PATROL-2026-0302-603"
+  },
+  "tree": {
+    "archive_id": "ARC-603-01",
+    "archive_version": 1,
+    "tree_no": "603",
+    "block_id": "BLK-13",
+    "grid_code": "G13-04",
+    "tag_id": "TAG-8603",
+    "species": "Salix matsudana",
+    "protected_level": "ordinary",
+    "planted_year": 1998
+  },
+  "inspections": [
+    {
+      "inspection_id": "INS-T603-01",
+      "inspector_id": "PATROL-X",
+      "inspector_org": "City Forestry Patrol",
+      "observed_at": "2026-03-01T09:00:00+08:00",
+      "self_reported": false,
+      "evidence": [
+        {
+          "evidence_id": "EV-T603-L1",
+          "kind": "lean",
+          "capture_at": "2026-03-01T09:00:00+08:00",
+          "captured_by": "PATROL-X",
+          "file": "../assets/lean_603_single.txt",
+          "lean_angle_deg": 19.0
+        },
+        {
+          "evidence_id": "EV-T603-H1",
+          "kind": "hollow",
+          "capture_at": "2026-03-01T09:05:00+08:00",
+          "captured_by": "PATROL-X",
+          "file": "../assets/hollow_603_single.txt",
+          "hollow_ratio": 0.5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "treecase.tree.v1",
+  "event_id": "tree-t201-initial",
+  "recorded_at": "2026-03-01T10:00:00+08:00",
+  "source": {
+    "kind": "patrol_inspection",
+    "reference": "PATROL-2026-0301-201"
+  },
+  "tree": {
+    "archive_id": "ARC-201-01",
+    "archive_version": 1,
+    "tree_no": "201",
+    "block_id": "BLK-08",
+    "grid_code": "G08-03",
+    "tag_id": "TAG-8120",
+    "species": "Ginkgo biloba",
+    "protected_level": "protected",
+    "planted_year": 1998
+  },
+  "inspections": [
+    {
+      "inspection_id": "INS-T201-01",
+      "inspector_id": "PATROL-A",
+      "inspector_org": "City Forestry Patrol",
+      "observed_at": "2026-03-01T09:00:00+08:00",
+      "self_reported": false,
+      "evidence": [
+        {
+          "evidence_id": "EV-T201-L",
+          "kind": "lean",
+          "capture_at": "2026-03-01T08:55:00+08:00",
+          "captured_by": "PATROL-A",
+          "file": "../assets/lean_201_a.txt",
+          "lean_angle_deg": 9.0
+        },
+        {
+          "evidence_id": "EV-T201-H",
+          "kind": "hollow",
+          "capture_at": "2026-03-01T09:05:00+08:00",
+          "captured_by": "PATROL-B",
+          "file": "../assets/hollow_201_b.txt",
+          "hollow_ratio": 0.25
+        }
+      ]
+    }
+  ]
+}

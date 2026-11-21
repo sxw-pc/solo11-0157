@@ -1,0 +1,21 @@
+{
+  "schema": "treecase.tree.v1",
+  "event_id": "tree-t601-conflict",
+  "recorded_at": "2026-03-02T10:00:00+08:00",
+  "source": {
+    "kind": "patrol_inspection",
+    "reference": "PATROL-2026-0302-601X"
+  },
+  "tree": {
+    "archive_id": "ARC-601-02",
+    "archive_version": 2,
+    "tree_no": "601",
+    "block_id": "BLK-62",
+    "grid_code": "G62-99",
+    "tag_id": "TAG-6002",
+    "species": "Platanus orientalis",
+    "protected_level": "ordinary",
+    "planted_year": 1998
+  },
+  "inspections": []
+}

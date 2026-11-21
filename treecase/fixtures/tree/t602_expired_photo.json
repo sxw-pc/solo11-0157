@@ -1,0 +1,47 @@
+{
+  "schema": "treecase.tree.v1",
+  "event_id": "tree-t602-expired-photo",
+  "recorded_at": "2026-03-02T10:00:00+08:00",
+  "source": {
+    "kind": "patrol_inspection",
+    "reference": "PATROL-2026-0302-602"
+  },
+  "tree": {
+    "archive_id": "ARC-602-01",
+    "archive_version": 1,
+    "tree_no": "602",
+    "block_id": "BLK-13",
+    "grid_code": "G13-03",
+    "tag_id": "TAG-8602",
+    "species": "Ulmus pumila",
+    "protected_level": "ordinary",
+    "planted_year": 1998
+  },
+  "inspections": [
+    {
+      "inspection_id": "INS-T602-01",
+      "inspector_id": "PATROL-A",
+      "inspector_org": "City Forestry Patrol",
+      "observed_at": "2026-03-01T09:10:00+08:00",
+      "self_reported": false,
+      "evidence": [
+        {
+          "evidence_id": "EV-T602-L1",
+          "kind": "lean",
+          "capture_at": "2026-02-01T09:00:00+08:00",
+          "captured_by": "PATROL-A",
+          "file": "../assets/lean_602_expired.txt",
+          "lean_angle_deg": 27.0
+        },
+        {
+          "evidence_id": "EV-T602-H1",
+          "kind": "hollow",
+          "capture_at": "2026-03-01T09:12:00+08:00",
+          "captured_by": "PATROL-B",
+          "file": "../assets/hollow_602_b.txt",
+          "hollow_ratio": 0.1
+        }
+      ]
+    }
+  ]
+}

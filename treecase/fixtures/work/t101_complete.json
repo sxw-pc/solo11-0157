@@ -1,0 +1,62 @@
+{
+  "schema": "treecase.work.v1",
+  "event_id": "work-t101-complete",
+  "recorded_at": "2026-03-05T11:00:00+08:00",
+  "source": {
+    "kind": "field_work_receipt",
+    "reference": "WORK-2026-0305-101"
+  },
+  "work": {
+    "work_id": "W-101",
+    "permit_id": "PER-101-EMERGENCY",
+    "tree_no": "101",
+    "block_id": "BLK-07",
+    "grid_code": "G07-14",
+    "tag_id": "TAG-7781",
+    "contractor_id": "GREEN-OPS",
+    "operator_id": "OP-9",
+    "performed_at": "2026-03-05T09:00:00+08:00",
+    "cuts": [
+      {
+        "diameter_cm": 6.0,
+        "count": 1,
+        "part": "lower limb"
+      }
+    ],
+    "reinspection": {
+      "reinspection_id": "R-101",
+      "witness_id": "AUD-22",
+      "witness_org": "Independent Tree Audit Office",
+      "witnessed_at": "2026-03-05T10:00:00+08:00",
+      "stable": true,
+      "file": "../assets/reinspection_101.txt"
+    },
+    "counter_evidence": {
+      "inspection_id": "INS-W101-COUNTER",
+      "observer_id": "EVAL-9",
+      "observer_org": "Independent Tree Audit Office",
+      "inspector_id": "EVAL-9",
+      "inspector_org": "Independent Tree Audit Office",
+      "observed_at": "2026-03-05T09:40:00+08:00",
+      "self_reported": false,
+      "evidence": [
+        {
+          "evidence_id": "EV-W101-CL",
+          "kind": "lean",
+          "capture_at": "2026-03-05T09:35:00+08:00",
+          "captured_by": "EVAL-9",
+          "file": "../assets/counter_lean_101_e.txt",
+          "lean_angle_deg": 6.0
+        },
+        {
+          "evidence_id": "EV-W101-CH",
+          "kind": "hollow",
+          "capture_at": "2026-03-05T09:42:00+08:00",
+          "captured_by": "EVAL-10",
+          "file": "../assets/counter_hollow_101_f.txt",
+          "hollow_ratio": 0.05
+        }
+      ]
+    }
+  }
+}

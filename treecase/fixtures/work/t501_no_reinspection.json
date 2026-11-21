@@ -1,0 +1,29 @@
+{
+  "schema": "treecase.work.v1",
+  "event_id": "work-t501-noinspection",
+  "recorded_at": "2026-03-05T11:00:00+08:00",
+  "source": {
+    "kind": "field_work_receipt",
+    "reference": "WORK-2026-0305-501"
+  },
+  "work": {
+    "work_id": "W-501-NOINSP",
+    "permit_id": "PER-501-SCOPE",
+    "tree_no": "501",
+    "block_id": "BLK-12",
+    "grid_code": "G12-02",
+    "tag_id": "TAG-8501",
+    "contractor_id": "GREEN-OPS",
+    "operator_id": "OP-14",
+    "performed_at": "2026-03-05T09:00:00+08:00",
+    "cuts": [
+      {
+        "diameter_cm": 4.0,
+        "count": 1,
+        "part": "lower limb"
+      }
+    ],
+    "reinspection": null,
+    "counter_evidence": null
+  }
+}

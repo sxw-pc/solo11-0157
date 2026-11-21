@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "treecase"
+version = "1.0.0"
+description = "Offline street-tree risk handling evidence desk"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.scripts]
+treecase = "treecase.__main__:main"
+
+[tool.setuptools]
+packages = ["treecase"]
+
+[tool.setuptools.package-data]
+treecase = ["fixtures/*/*.json", "fixtures/*/*.txt"]
