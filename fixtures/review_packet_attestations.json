@@ -1,0 +1,22 @@
+{
+  "credentials": [
+    {
+      "credential_id": "REL-101-REV1",
+      "adjudication_ref": "PER-101-NORMAL#rev1",
+      "attestor_id": "ATTESTOR-Q",
+      "evidence_ids": ["EV-T101-L1", "EV-T101-H1"],
+      "distinct": true,
+      "grade_inputs": {"lean_angle_deg": 12.0, "hollow_ratio": 0.22},
+      "effective_delta_seconds": 420
+    },
+    {
+      "credential_id": "REL-101-REV2",
+      "adjudication_ref": "PER-101-NORMAL#rev2",
+      "attestor_id": "ATTESTOR-Q",
+      "evidence_ids": ["EV-T101-L2", "EV-T101-H2"],
+      "distinct": true,
+      "grade_inputs": {"lean_angle_deg": 22.0, "hollow_ratio": 0.48},
+      "effective_delta_seconds": 900
+    }
+  ]
+}
