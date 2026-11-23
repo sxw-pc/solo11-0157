@@ -1,0 +1,122 @@
+{
+ "passes": [
+  {
+   "id": "FIELD-X-LEN",
+   "case_id": "FIELD-X-LEN",
+   "shape": "field_contract",
+   "contract_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R0", "clamp_intact": true, "direction": 1, "scale": 2},
+    {"id": "R1", "clamp_intact": true, "direction": 1, "scale": 2}
+   ],
+   "segments": [
+    {"id": "S1", "round_id": "R0", "local": [0, 2], "candidate_translations": [0], "original_id": "ORIG-X-1"},
+    {"id": "S2", "round_id": "R1", "local": [0, 2], "candidate_translations": [0, 2, 4], "original_id": "ORIG-X-2"}
+   ],
+   "control_points": [],
+   "closures": []
+  },
+  {
+   "id": "FIELD-X-CTL",
+   "case_id": "FIELD-X-CTL",
+   "shape": "field_contract",
+   "contract_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R0", "clamp_intact": true, "direction": 1, "scale": 2},
+    {"id": "R1", "clamp_intact": true, "direction": 1, "scale": 2}
+   ],
+   "segments": [
+    {"id": "S1", "round_id": "R0", "local": [0, 2], "candidate_translations": [0], "original_id": "ORIG-X-1"},
+    {"id": "S2", "round_id": "R1", "local": [0, 2], "candidate_translations": [0, 2, 4], "original_id": "ORIG-X-2"}
+   ],
+   "control_points": [
+    {"id": "CP-2A", "round_id": "R1", "witness_id": "SURVEY-A", "locked_translation": 2},
+    {"id": "CP-2B", "round_id": "R1", "witness_id": "SURVEY-B", "locked_translation": 2}
+   ],
+   "closures": []
+  },
+  {
+   "id": "FIELD-X-CLS",
+   "case_id": "FIELD-X-CLS",
+   "shape": "field_contract",
+   "contract_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R0", "clamp_intact": false, "direction": 1, "scale": 2},
+    {"id": "R1", "clamp_intact": false, "direction": 1, "scale": 2}
+   ],
+   "segments": [
+    {"id": "S1", "round_id": "R0", "local": [0, 2], "candidate_translations": [0], "original_id": "ORIG-X-1"},
+    {"id": "S2", "round_id": "R1", "local": [0, 2], "candidate_translations": [0, 2, 4], "original_id": "ORIG-X-2"}
+   ],
+   "control_points": [],
+   "closures": [
+    {
+     "id": "CLS-X-1",
+     "start_segment": "S1",
+     "segments": ["S1", "S2"],
+     "endpoint_relation": "disjoint",
+     "actual_closure": true
+    }
+   ]
+  },
+  {
+   "id": "FIELD-X-INF",
+   "case_id": "FIELD-X-INF",
+   "shape": "field_contract",
+   "contract_range": [0, 10],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R0", "clamp_intact": true, "direction": 1, "scale": 2}
+   ],
+   "segments": [
+    {"id": "S1", "round_id": "R0", "local": [0, 2], "candidate_translations": [0, 2], "original_id": "ORIG-Y-1"},
+    {"id": "S2", "round_id": "R0", "local": [0, 2], "candidate_translations": [2, 4], "original_id": "ORIG-Y-2"},
+    {"id": "S3", "round_id": "R0", "local": [0, 2], "candidate_translations": [4, 6], "original_id": "ORIG-Y-3"}
+   ],
+   "control_points": [],
+   "closures": []
+  },
+  {
+   "id": "FIELD-X-DUP",
+   "case_id": "FIELD-X-DUP",
+   "shape": "field_contract",
+   "contract_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R0", "clamp_intact": true, "direction": 1, "scale": 2},
+    {"id": "R1", "clamp_intact": true, "direction": 1, "scale": 2}
+   ],
+   "segments": [
+    {"id": "S1", "round_id": "R0", "local": [0, 2], "candidate_translations": [0], "original_id": "ORIG-X-1"},
+    {"id": "S2", "round_id": "R1", "local": [0, 2], "candidate_translations": [0, 2, 4], "original_id": "ORIG-X-2"},
+    {"id": "S2-COPY", "round_id": "R1", "local": [0, 2], "candidate_translations": [0, 2, 4], "original_id": "ORIG-X-2"}
+   ],
+   "control_points": [
+    {"id": "CP-2A", "round_id": "R1", "witness_id": "SURVEY-A", "locked_translation": 2},
+    {"id": "CP-2B", "round_id": "R1", "witness_id": "SURVEY-B", "locked_translation": 2}
+   ],
+   "closures": []
+  },
+  {
+   "id": "FIELD-X-DUPCON",
+   "case_id": "FIELD-X-DUPCON",
+   "shape": "field_contract",
+   "contract_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R0", "clamp_intact": true, "direction": 1, "scale": 2},
+    {"id": "R1", "clamp_intact": true, "direction": 1, "scale": 2}
+   ],
+   "segments": [
+    {"id": "S1", "round_id": "R0", "local": [0, 2], "candidate_translations": [0], "original_id": "ORIG-X-2"},
+    {"id": "S2", "round_id": "R1", "local": [0, 2], "candidate_translations": [0, 2, 4], "original_id": "ORIG-X-2"},
+    {"id": "S2-ALT", "round_id": "R1", "local": [1, 3], "candidate_translations": [0, 2, 4], "original_id": "ORIG-X-2"}
+   ],
+   "control_points": [],
+   "closures": []
+  }
+ ]
+}

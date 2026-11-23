@@ -1,19 +1,61 @@
-"""Capture synthetic traverse spans on nominal integer coordinates."""
+"""Capture synthetic traverse spans on nominal integer coordinates.
+
+Two evidence shapes share this capture entry point:
+
+* the nominal-grid baseline (``spans``), whose cells are recorded directly;
+* a field contract (``shape == "field_contract"``), whose local segments may
+  have been shifted by a clamp change and whose signable coverage is the
+  minimum true union over every interpretation the originals allow.
+"""
 
 import argparse
 import json
 from pathlib import Path
 
-from . import field_delivery, store
+from . import field_coverage, field_delivery, store
 
 
-def capture(db, evidence):
+def _nominal_outcome(evidence):
     spans = evidence["spans"]
     if not spans or any(type(lo) is not int or type(hi) is not int or lo >= hi for lo, hi in spans):
         raise ValueError("valid half-open integer spans required")
     covered = {tick for lo, hi in spans for tick in range(lo, hi)}
-    limit = evidence["minimum"]
-    outcome = "complete" if len(covered) >= limit else "short"
+    return "complete" if len(covered) >= evidence["minimum"] else "short"
+
+
+def capture(db, evidence):
+    if evidence.get("shape") == "field_contract":
+        return _capture_contract(db, evidence)
+
+    outcome = _nominal_outcome(evidence)
+    raw = _record(db, evidence, outcome)
+    if raw is not None:
+        return {"outcome": outcome, "delivery": "already_recorded"}
+    state = field_delivery.reconsider(db, evidence["case_id"], outcome, evidence["id"])
+    return {"outcome": outcome, "delivery": state}
+
+
+def _capture_contract(db, evidence):
+    result = field_coverage.evaluate(evidence)
+    outcome = "complete" if result["status"] == "ready" else "short"
+    raw = _record(db, evidence, outcome)
+    if raw is not None:
+        return {"outcome": outcome, "delivery": "already_recorded",
+                "status": result["status"], "reason": result["reason"],
+                "coverage_floor": result["coverage_floor"],
+                "position_certified": result["position_certified"]}
+    field_coverage.save(db, evidence["case_id"], evidence["id"], result)
+    state = field_delivery.reconsider(db, evidence["case_id"], outcome, evidence["id"], result)
+    return {"outcome": outcome, "delivery": state, "status": result["status"],
+            "reason": result["reason"], "coverage_floor": result["coverage_floor"],
+            "coverage_max": result["coverage_max"],
+            "certain_spans": result["certain_spans"],
+            "position_certified": result["position_certified"],
+            "position_review_available": result["position_review_available"],
+            "interpretation_count": result["interpretation_count"]}
+
+
+def _record(db, evidence, outcome):
     db.execute(
         """CREATE TABLE IF NOT EXISTS field_track(
             id TEXT PRIMARY KEY, case_id TEXT NOT NULL, raw TEXT NOT NULL,
@@ -25,10 +67,10 @@ def capture(db, evidence):
     if existing:
         if existing[0] != raw:
             raise ValueError("track id conflict")
-        return {"outcome": outcome, "delivery": "already_recorded"}
-    db.execute("INSERT INTO field_track VALUES (?,?,?,?)", (evidence["id"], evidence["case_id"], raw, outcome))
-    state = field_delivery.reconsider(db, evidence["case_id"], outcome, evidence["id"])
-    return {"outcome": outcome, "delivery": state}
+        return raw
+    db.execute("INSERT INTO field_track VALUES (?,?,?,?)",
+               (evidence["id"], evidence["case_id"], raw, outcome))
+    return None
 
 
 def main():
