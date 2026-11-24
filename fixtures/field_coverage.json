@@ -1,0 +1,191 @@
+{
+ "contracts": [
+  {
+   "schema": "treecase.field_contract.v1",
+   "id": "FIELD-X-A",
+   "case_id": "CASE-X-A",
+   "plot_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R1", "direction": "forward", "scale": 1, "mounting_intact": true},
+    {"id": "R2", "direction": "forward", "scale": 1, "mounting_intact": true}
+   ],
+   "segments": [
+    {"id": "S1", "source_id": "SRC-X-SEG-1", "round": "R1", "local": [0, 2], "translations": [0]},
+    {"id": "S2", "source_id": "SRC-X-SEG-2", "round": "R2", "local": [0, 2], "translations": [0, 2, 4]}
+   ],
+   "evidence": [
+    {"kind": "length_witness", "segment": "S1", "source_id": "LW-X-S1"},
+    {"kind": "length_witness", "segment": "S2", "source_id": "LW-X-S2"}
+   ]
+  },
+  {
+   "schema": "treecase.field_contract.v1",
+   "id": "FIELD-X-B",
+   "case_id": "CASE-X-B",
+   "plot_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R1", "direction": "forward", "scale": 1, "mounting_intact": true},
+    {"id": "R2", "direction": "forward", "scale": 1, "mounting_intact": true}
+   ],
+   "segments": [
+    {"id": "S1", "source_id": "SRC-X-SEG-1", "round": "R1", "local": [0, 2], "translations": [0]},
+    {"id": "S2", "source_id": "SRC-X-SEG-2", "round": "R2", "local": [0, 2], "translations": [0, 2, 4]}
+   ],
+   "evidence": [
+    {"kind": "length_witness", "segment": "S1", "source_id": "LW-X-S1"},
+    {"kind": "length_witness", "segment": "S2", "source_id": "LW-X-S2"},
+    {"kind": "control_points", "round": "R2", "translation": 2,
+     "points": [
+      {"point_id": "CP-X-2A", "witness_id": "SURVEY-A"},
+      {"point_id": "CP-X-2B", "witness_id": "SURVEY-B"}
+     ],
+     "reinspection_available": true,
+     "source_ids": ["CP-X-2A", "CP-X-2B"]}
+   ]
+  },
+  {
+   "schema": "treecase.field_contract.v1",
+   "id": "FIELD-X-C",
+   "case_id": "CASE-X-C",
+   "plot_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R1", "direction": "forward", "scale": 1, "mounting_intact": true},
+    {"id": "R2", "direction": "forward", "scale": 1, "mounting_intact": false}
+   ],
+   "segments": [
+    {"id": "S1", "source_id": "SRC-X-SEG-1", "round": "R1", "local": [0, 2], "translations": [0]},
+    {"id": "S2", "source_id": "SRC-X-SEG-2", "round": "R2", "local": [0, 2], "translations": [0, 2, 4]}
+   ],
+   "evidence": [
+    {"kind": "length_witness", "segment": "S1", "source_id": "LW-X-S1"},
+    {"kind": "length_witness", "segment": "S2", "source_id": "LW-X-S2"},
+    {"kind": "control_points", "round": "R2", "translation": 2,
+     "points": [
+      {"point_id": "CP-X-OLD-2A", "witness_id": "SURVEY-A"},
+      {"point_id": "CP-X-OLD-2B", "witness_id": "SURVEY-B"}
+     ],
+     "reinspection_available": true,
+     "source_ids": ["CP-X-OLD-2A", "CP-X-OLD-2B"]},
+    {"kind": "closure", "chain_rounds": ["R1", "R2"],
+     "receipts": {"origin": "RC-X-ORIGIN", "endpoint_relation": "RC-X-ENDPOINT",
+                  "closure": "RC-X-CLOSURE"},
+     "relations": [{"a": "S1", "b": "S2", "relation": "disjoint"}],
+     "chain_unbroken": true,
+     "source_ids": ["RC-X-ORIGIN", "RC-X-ENDPOINT", "RC-X-CLOSURE"]}
+   ]
+  },
+  {
+   "schema": "treecase.field_contract.v1",
+   "id": "FIELD-X-D",
+   "case_id": "CASE-X-D",
+   "plot_range": [0, 8],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R1", "direction": "forward", "scale": 1, "mounting_intact": true}
+   ],
+   "segments": [
+    {"id": "S1", "source_id": "SRC-X-D-SEG-1", "round": "R1", "local": [0, 2], "translations": [0, 2]},
+    {"id": "S2", "source_id": "SRC-X-D-SEG-2", "round": "R1", "local": [0, 2], "translations": [2, 4]},
+    {"id": "S3", "source_id": "SRC-X-D-SEG-3", "round": "R1", "local": [0, 2], "translations": [4, 6]}
+   ],
+   "evidence": [
+    {"kind": "length_witness", "segment": "S1", "source_id": "LW-X-D-S1"},
+    {"kind": "length_witness", "segment": "S2", "source_id": "LW-X-D-S2"},
+    {"kind": "length_witness", "segment": "S3", "source_id": "LW-X-D-S3"}
+   ]
+  },
+  {
+   "schema": "treecase.field_contract.v1",
+   "id": "FIELD-X-E-1",
+   "case_id": "CASE-X-E",
+   "plot_range": [0, 4],
+   "minimum": 2,
+   "rounds": [
+    {"id": "R1", "direction": "forward", "scale": 1, "mounting_intact": true}
+   ],
+   "segments": [
+    {"id": "S1", "source_id": "SRC-X-E-SEG", "round": "R1", "local": [0, 2], "translations": [2]}
+   ],
+   "evidence": [
+    {"kind": "length_witness", "segment": "S1", "source_id": "LW-X-E-S1"}
+   ]
+  },
+  {
+   "schema": "treecase.field_contract.v1",
+   "id": "FIELD-X-E-2",
+   "case_id": "CASE-X-E",
+   "plot_range": [0, 4],
+   "minimum": 2,
+   "rounds": [
+    {"id": "R1", "direction": "forward", "scale": 1, "mounting_intact": true}
+   ],
+   "segments": [
+    {"id": "S1", "source_id": "SRC-X-E-SEG", "round": "R1", "local": [0, 2], "translations": [2]}
+   ],
+   "evidence": [
+    {"kind": "length_witness", "segment": "S1", "source_id": "LW-X-E-S1"}
+   ]
+  },
+  {
+   "schema": "treecase.field_contract.v1",
+   "id": "FIELD-X-F-1",
+   "case_id": "CASE-X-F",
+   "plot_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R1", "direction": "forward", "scale": 1, "mounting_intact": true}
+   ],
+   "segments": [
+    {"id": "S1", "source_id": "SRC-X-F-SEG", "round": "R1", "local": [0, 2], "translations": [0, 2]}
+   ],
+   "evidence": [
+    {"kind": "length_witness", "segment": "S1", "source_id": "LW-X-F-S1"}
+   ]
+  },
+  {
+   "schema": "treecase.field_contract.v1",
+   "id": "FIELD-X-F-2",
+   "case_id": "CASE-X-F",
+   "plot_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R1", "direction": "forward", "scale": 1, "mounting_intact": true}
+   ],
+   "segments": [
+    {"id": "S1", "source_id": "SRC-X-F-SEG", "round": "R1", "local": [0, 2], "translations": [2, 4]}
+   ],
+   "evidence": [
+    {"kind": "length_witness", "segment": "S1", "source_id": "LW-X-F-S1"}
+   ]
+  },
+  {
+   "schema": "treecase.field_contract.v1",
+   "id": "FIELD-X-G",
+   "case_id": "CASE-X-G",
+   "plot_range": [0, 6],
+   "minimum": 4,
+   "rounds": [
+    {"id": "R1", "direction": "forward", "scale": 1, "mounting_intact": true},
+    {"id": "R2", "direction": "forward", "scale": 1, "mounting_intact": false}
+   ],
+   "segments": [
+    {"id": "S1", "source_id": "SRC-X-SEG-1", "round": "R1", "local": [0, 2], "translations": [0]},
+    {"id": "S2", "source_id": "SRC-X-SEG-2", "round": "R2", "local": [0, 2], "translations": [0, 2, 4]}
+   ],
+   "evidence": [
+    {"kind": "length_witness", "segment": "S1", "source_id": "LW-X-S1"},
+    {"kind": "length_witness", "segment": "S2", "source_id": "LW-X-S2"},
+    {"kind": "control_points", "round": "R2", "translation": 2,
+     "points": [
+      {"point_id": "CP-X-G-2A", "witness_id": "SURVEY-A"},
+      {"point_id": "CP-X-G-2B", "witness_id": "SURVEY-B"}
+     ],
+     "reinspection_available": true,
+     "source_ids": ["CP-X-G-2A", "CP-X-G-2B"]}
+   ]
+  }
+ ]
+}
